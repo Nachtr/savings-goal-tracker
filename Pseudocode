@@ -1,11 +1,21 @@
 // Step 1: Create a savings goal for the user! # Im going to put "//" infront of all steps to make this easier to read!
 create_goal(user_id, target_amount, target_date)
+  user_id = input("Please enter your User ID:)
+  target_amount = input("Please enter your target savings amount:")
+  target_date = input("Please enter your target savings date:")
+
   set amount_saved = 0
   store user_id, target_amount, target_date, amount_saved # Maybe through some sort of database or dictionary? 
   print("Your goal has successfully been created!"
 
 // Step 2: Savings progress update
 update_saings(user_id, deposit_amount)
+  user_id = input("Please enter your User ID:) # Please find a way to match this to the laster user id to pull up the users information. Maybe by the use of a database we can accomplish this!
+  deposit_amount = input("Please enter deposit amount:")
+
+  if deposit_amount <= 0:
+    print("Error: Deposit amount must be positive!")
+  End if:
   retrieve amount_saved for user_id
   amount_saved = amount_saved + deposit_amount # minus the banks fees if there are any!
   store updated amount_saved # python does this automatically right?
@@ -13,13 +23,16 @@ update_saings(user_id, deposit_amount)
 
 // Step 3: Check savings goal status within system
 get_savings_status(for user_id)
+  user_id = input("Please enter your User ID:)
   retrieve total_amount, and amount_saved for user_id
   print("You have saved $," {amount_saved}, "out of $," {target_amount}, "You are X% complete" # list this through on-code-line calculation for percentage, or make variable for later.
 
 // Step 4: Notify/Compose message to user if goal deadline is near
 check_goal_deadline(for user_id)
-  retrieve target_date, amount_saved, and target_amount for user_id
-  If current_date is near target_date and (amount_saved < total_amount):
-    print("Alert: Your savings goal deadline is closing in!" "You have saved $," {amount_saved}, "out of $," {target_amount}, "You are X% complete"
-  else:
-    break # I might be using if statements incorrectly here. Bear with me, I am still learning!
+  retrieve all users from system #figure out how to do this!!!
+  for each user in system:
+    retrieve target_date, amount_saved, and target_amount for user_id
+    If current_date is near target_date and (amount_saved < total_amount):
+      print("Alert: Your savings goal deadline is closing in!" "You have saved $," {amount_saved}, "out of $," {target_amount}, "You are X% complete"
+    else:
+      break # I might be using if statements incorrectly here. Bear with me, I am still learning!
