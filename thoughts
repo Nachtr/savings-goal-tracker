@@ -1,0 +1,40 @@
+Throughout this project, I split the assignment into 6 different steps:
+1.	Identifying core functionality
+2.	Ensuring data is stored and retrieved
+3.	Validating user input to prevent errors
+4.	Handling condition-based actions (triangles)
+5.	Ensuring a logical flow between my steps
+6.	And lastly, considering future improvements.
+
+Firstly, when I was identifying core functionality, I determined that there needed to be a main or central goal: helping users set, track, and update their savings goals. I tried my best to structure my flowchart and pseudocode into four steps that would help to accomplish this goal:
+1.	Create savings goal
+a.	This step focused on collecting user input to create their initial goal
+i.	Stuff like user id which I would have presumed would have been previously assigned but if not, we could possibly use some sort of random number generation from import random
+ii.	The targeted amount when initialized should create a new variable called amount saved which should be set to 0 until the user deposits or notes a deposit.
+
+2.	Update Savings
+a.	The goal was to allow users to input their deposits and increase the amount saved variable. This would help the user track their progress/
+
+3.	Check Savings Status
+a.	This is self-explanatory, but the goal was to provide users their current savings progress (percentage saved, and amount out of target)
+
+4.	Notify Users of approaching deadlines.
+a.	I thought to use a loop here or something that would resemble a loop so that when the system starts it automatically sends out notices to those that are near their current goal date.
+
+Fundamentally through this step, my thought process was focused on what a user would need to effectively and efficiently manage their savings.
+
+My second goal was to ensure that users data was stored and retrieved properly and validated. Using variables such as user_id, target_amount, target_date, and amount_saved, I thought I would be able to accurately track the users’ goals while still making it relatively simple. If I knew more about code, I think I would incorporate a database generator, or something to generate a database based off the number of goals in relation to each user’s user_id. 
+
+Continually, when I was thinking about validation, I thought we should include checks to ensure that the users deposit is positive and not negative as that could presumably crash the function. I also wanted to ensure that the user verified their user_id before each step to ensure that it was existing. I think without a database; the best way would be to create some sort of dictionary or something?
+
+Regarding condition-based actions, I wanted to make sure that if a user’s deposit was negative that the system would display an error. I also wanted to ensure that a user when reaching their goal would be able to see a completion percentage. I kind of built around using if statements in my pseudocode to try to ensure that the program would effectively adapt based on different varying scenarios that could appear.
+
+Lastly, I wanted to write a little something that would share my opinion on how I could improve it in the future.
+
+I think firstly, we must come up with some sort of way to efficiently store the data. Whether that be databases, dictionaries or something else. This way we can ensure that we retrieve the user’s information properly, and without fail.
+
+Secondly, I want to come up with some sort of withdraw feature that could be incorporated into this function to reflect real world scenarios where users sometimes have to pull from their savings goals.
+
+Lastly, I want to find a way to effectively loop through all users when checking for deadlines. I’m sure that this kind of builds back to the first goal but if we find some way to store data, we should be able to build a loop that looks through dates or something.
+
+Anyways, I hope this effectively conveys my thought process on this project.
